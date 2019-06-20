@@ -1,9 +1,9 @@
 {
-  "type": "sqlite",
+   "type": "sqlite",
    "database": "database.sqlite",
    "synchronize": true,
-   "logging": false,
-   "entities": ["src/**/*.entity{.ts,.js}"],
+   "logging": true,
+   "entities": ["src/entities/*.entity{.ts,.js}"],
    "migrations": [
       "src/migration/**/*.ts"
    ],
@@ -15,4 +15,4 @@
       "migrationsDir": "src/migration",
       "subscribersDir": "src/subscriber"
    }
-  }
+}

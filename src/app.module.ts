@@ -1,23 +1,16 @@
 import { Module } from '@nestjs/common';
-// import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { EventsGateway } from './events/events.gateway';
-// import { GraphQLModule } from '@nestjs/graphql';
+import { ApiModule } from './api.module';
+import { AppGateway } from './app.gateway';
 
 
 @Module({
   imports: [
-    // TypeOrmModule.forRoot(),
-    // GraphQLModule.forRoot({
-    //   // debug: false,
-    //   // playground: false,
-    //   installSubscriptionHandlers: true,
-    //   autoSchemaFile: 'schema.gql',
-    // }),
-    
+    TypeOrmModule.forRoot(),
+    ApiModule,
   ],
   controllers: [AppController],
-  providers: [EventsGateway, AppService],
+  providers: [AppGateway]
 })
 export class AppModule { }
