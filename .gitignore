@@ -1,6 +1,8 @@
 # compiled output
 /dist
 /node_modules
+
+# generated files
 database.sqlite
 schema.gql
 

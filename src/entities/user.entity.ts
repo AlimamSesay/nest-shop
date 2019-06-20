@@ -64,7 +64,7 @@ export class UserEntity {
                 name,
                 email,
             },
-            process.env.SECRET,
+            process.env.SECRET_KEY,
             { expiresIn: '7d' },
         );
     }
