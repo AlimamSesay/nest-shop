@@ -5,7 +5,7 @@ import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, M
 @Index("idx_orders_customer_id", ["customer_id",])
 @Index("idx_orders_shipping_id", ["shipping_id",])
 @Index("idx_orders_tax_id", ["tax_id",])
-export class orders {
+export class OrdersEntity {
 
     @PrimaryGeneratedColumn({
         type: "int",

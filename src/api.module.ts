@@ -6,10 +6,11 @@ import { CustomerModule } from './customer/customer.module';
 import { ProductModule } from './product/product.module';
 import { CategoryModule } from './category/category.module';
 import { DepartmentModule } from './department/department.module';
+import { OrderModule } from './order/order.module';
 
 
 @Module({
-  imports: [UserModule, CustomerModule, ProductModule, CategoryModule, DepartmentModule],
+  imports: [UserModule, CustomerModule, ProductModule, CategoryModule, DepartmentModule, OrderModule],
   providers: [
     {
       provide: APP_FILTER,
