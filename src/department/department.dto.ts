@@ -1,5 +1,4 @@
-export class CategoryRO {
-  category_id: number;
+export class DepartmentRO {
   department_id: number;
   name: string;
   description?: string;

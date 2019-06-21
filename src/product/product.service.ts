@@ -34,7 +34,7 @@ export class ProductService {
 
     async read(id: number): Promise<ProductRO> {
         const product = await this.productRepository.findOne({
-            where: { id },
+            where: { product_id: id },
         });
 
         if (!product) {

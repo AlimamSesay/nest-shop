@@ -2,7 +2,7 @@ import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, M
 
 
 @Entity("department")
-export class department {
+export class DepartmentEntity {
 
     @PrimaryGeneratedColumn({
         type: "int",

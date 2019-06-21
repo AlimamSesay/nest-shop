@@ -24,7 +24,7 @@ export class CustomerController {
         return this.customerService.showAll(page);
     }
 
-    @Get('api/users/:id')
+    @Get('api/customer/:id')
     showOneCustomer(@Param('id') id: string) {
         return this.customerService.read(id);
     }

@@ -9,8 +9,6 @@ export class CategoryService {
     constructor(
         @InjectRepository(CategoryEntity)
         private categoryRepository: Repository<CategoryEntity>,
-        @InjectRepository(CustomerEntity)
-        private customerRepository: Repository<CustomerEntity>,
     ) { }
 
     private categoryToResponseObject(category: CategoryEntity): CategoryRO {
@@ -32,7 +30,7 @@ export class CategoryService {
 
     async read(id: number): Promise<CategoryRO> {
         const category = await this.categoryRepository.findOne({
-            where: { id },
+            where: { category_id: id },
         });
 
         if (!category) {

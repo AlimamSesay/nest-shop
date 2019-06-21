@@ -22,7 +22,7 @@ export class CustomerService {
 
     async read(id: string) {
         const customer = await this.customerRepository.findOne({
-            where: { id }
+            where: { customer_id: id }
         });
         if (!customer) {
             throw new HttpException(
