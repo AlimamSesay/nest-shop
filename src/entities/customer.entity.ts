@@ -5,7 +5,7 @@ import * as jwt from 'jsonwebtoken';
 
 import { CustomerRO } from 'src/customer/customer.dto';
 
-@Entity("customer", { schema: "shop" })
+@Entity("customer")
 @Index("idx_customer_email", ["email",], { unique: true })
 @Index("idx_customer_shipping_region_id", ["shipping_region_id",])
 export class CustomerEntity {

@@ -1,7 +1,7 @@
 import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn, PrimaryGeneratedColumn, RelationId } from "typeorm";
 
 
-@Entity("shopping_cart", { schema: "shop" })
+@Entity("shopping_cart")
 @Index("idx_shopping_cart_cart_id", ["cart_id",])
 export class shopping_cart {
 

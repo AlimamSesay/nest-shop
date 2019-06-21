@@ -19,13 +19,13 @@ import { Customer } from './customer.decorator';
 export class CustomerController {
     constructor(private customerService: CustomerService) { }
 
-    @Get('api/users')
-    showAllUsers(@Query('page') page: number) {
+    @Get('api/customers')
+    showAllCustomers(@Query('page') page: number) {
         return this.customerService.showAll(page);
     }
 
     @Get('api/users/:id')
-    showOneUser(@Param('id') id: string) {
+    showOneCustomer(@Param('id') id: string) {
         return this.customerService.read(id);
     }
 
