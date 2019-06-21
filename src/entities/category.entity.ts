@@ -3,7 +3,7 @@ import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, M
 
 @Entity("category")
 @Index("idx_category_department_id", ["department_id",])
-export class category {
+export class CategoryEntity {
 
     @PrimaryGeneratedColumn({
         type: "int",
