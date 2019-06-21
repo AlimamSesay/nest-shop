@@ -7,10 +7,11 @@ import { ProductModule } from './product/product.module';
 import { CategoryModule } from './category/category.module';
 import { DepartmentModule } from './department/department.module';
 import { OrderModule } from './order/order.module';
+import { ShippingModule } from './shipping/shipping.module';
 
 
 @Module({
-  imports: [UserModule, CustomerModule, ProductModule, CategoryModule, DepartmentModule, OrderModule],
+  imports: [UserModule, CustomerModule, ProductModule, CategoryModule, DepartmentModule, OrderModule, ShippingModule],
   providers: [
     {
       provide: APP_FILTER,

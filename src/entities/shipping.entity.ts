@@ -1,9 +1,8 @@
 import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn, PrimaryGeneratedColumn, RelationId } from "typeorm";
 
-
 @Entity("shipping")
 @Index("idx_shipping_shipping_region_id", ["shipping_region_id",])
-export class shipping {
+export class ShippingEntity {
 
     @PrimaryGeneratedColumn({
         type: "int",
