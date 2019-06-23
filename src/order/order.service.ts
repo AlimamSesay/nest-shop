@@ -15,7 +15,6 @@ export class OrderService {
         const responseObject: any = {
             ...departmen,
         };
-        console.log('responseObject', responseObject)
         return responseObject;
     }
 
@@ -24,7 +23,6 @@ export class OrderService {
             take: 25,
             skip: 25 * (page - 1),
         });
-        console.log('orders', orders)
         return orders.map(order => this.ordersToResponseObject(order));
     }
 
@@ -36,7 +34,6 @@ export class OrderService {
         if (!order) {
             throw new HttpException('Not found', HttpStatus.NOT_FOUND);
         }
-        console.log('order', order)
         return this.ordersToResponseObject(order);
     }
 }

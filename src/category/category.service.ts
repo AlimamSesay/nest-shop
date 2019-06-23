@@ -15,7 +15,6 @@ export class CategoryService {
         const responseObject: any = {
             ...category,
         };
-        console.log('responseObject', responseObject)
         return responseObject;
     }
 
@@ -24,7 +23,6 @@ export class CategoryService {
             take: 25,
             skip: 25 * (page - 1),
         });
-        console.log('category', categories)
         return categories.map(category => this.categoryToResponseObject(category));
     }
 
@@ -36,7 +34,6 @@ export class CategoryService {
         if (!category) {
             throw new HttpException('Not found', HttpStatus.NOT_FOUND);
         }
-        console.log('category', category)
         return this.categoryToResponseObject(category);
     }
 }

@@ -16,7 +16,6 @@ export class ShippingService {
         const responseObject: any = {
             ...shipping,
         };
-        console.log('responseObject', responseObject)
         return responseObject;
     }
 
@@ -25,7 +24,6 @@ export class ShippingService {
             take: 25,
             skip: 25 * (page - 1),
         });
-        console.log('shipping', shipping)
         return shipping.map(shipping => this.shippingToResponseObject(shipping));
     }
 
@@ -37,7 +35,6 @@ export class ShippingService {
         if (!shipping) {
             throw new HttpException('Not found', HttpStatus.NOT_FOUND);
         }
-        console.log('shipping', shipping)
         return this.shippingToResponseObject(shipping);
     }
 }

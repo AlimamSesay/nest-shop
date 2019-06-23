@@ -15,7 +15,6 @@ export class DepartmentService {
         const responseObject: any = {
             ...departmen,
         };
-        console.log('responseObject', responseObject)
         return responseObject;
     }
 
@@ -24,7 +23,6 @@ export class DepartmentService {
             take: 25,
             skip: 25 * (page - 1),
         });
-        console.log('departments', departments)
         return departments.map(departmen => this.departmentToResponseObject(departmen));
     }
 
@@ -36,7 +34,6 @@ export class DepartmentService {
         if (!department) {
             throw new HttpException('Not found', HttpStatus.NOT_FOUND);
         }
-        console.log('department', department)
         return this.departmentToResponseObject(department);
     }
 }

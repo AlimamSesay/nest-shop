@@ -1,6 +1,5 @@
 export class ProductRO {
   product_id: number;
-  created: Date;
   name: string;
   description: string;
   price: string;
