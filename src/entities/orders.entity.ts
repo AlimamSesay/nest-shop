@@ -1,6 +1,5 @@
 import { BaseEntity, Column, Entity, Index, JoinColumn, JoinTable, ManyToMany, ManyToOne, OneToMany, OneToOne, PrimaryColumn, PrimaryGeneratedColumn, RelationId } from "typeorm";
 
-
 @Entity("orders")
 @Index("idx_orders_customer_id", ["customer_id",])
 @Index("idx_orders_shipping_id", ["shipping_id",])
