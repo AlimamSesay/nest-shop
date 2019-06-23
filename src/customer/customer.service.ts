@@ -20,9 +20,9 @@ export class CustomerService {
         return customers.map(customer => customer.toResponseObject());
     }
 
-    async read(id: string) {
+    async read(email: string) {
         const customer = await this.customerRepository.findOne({
-            where: { customer_id: id }
+            where: { email }
         });
         if (!customer) {
             throw new HttpException(

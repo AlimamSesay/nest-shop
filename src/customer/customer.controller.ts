@@ -24,10 +24,10 @@ export class CustomerController {
         return this.customerService.showAll(page);
     }
 
-    @Get('api/customer/:id')
-    showOneCustomer(@Param('id') id: string) {
-        return this.customerService.read(id);
-    }
+    // @Get('api/customer/:id')
+    // showOneCustomer(@Param('id') id: number) {
+    //     return this.customerService.read(id);
+    // }
 
     @Get('auth/whoami')
     @UseGuards(new AuthGuard())

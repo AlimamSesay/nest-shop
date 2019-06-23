@@ -2,7 +2,7 @@ import { Resolver, Query, Args } from '@nestjs/graphql';
 import { ProductService } from './product.service';
 import { Product } from './product';
 
-@Resolver(of => Product)
+@Resolver('Product')
 export class ProductResolver {
     constructor(private productService: ProductService) { }
 

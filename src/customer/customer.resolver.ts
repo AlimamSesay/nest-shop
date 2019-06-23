@@ -2,7 +2,7 @@ import { Resolver, Query, Args } from '@nestjs/graphql';
 import { CustomerService } from './customer.service';
 import { Customer } from './customer';
 
-@Resolver(of => Customer)
+@Resolver('Customer')
 export class CustomerResolver {
     constructor(private customerService: CustomerService) { }
 
@@ -12,7 +12,7 @@ export class CustomerResolver {
     }
 
     @Query(returns => Customer)
-    async customer(@Args('id') id: string) {
-        return await this.customerService.read(id);
+    async customer(@Args('email') email: string) {
+        return await this.customerService.read(email);
     }
 }
